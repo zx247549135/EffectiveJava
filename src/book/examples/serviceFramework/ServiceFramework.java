@@ -28,7 +28,10 @@ public class ServiceFramework {
         if (p == null)
             throw new IllegalArgumentException(
                     "No provider registered with name: " + name);
-        return p.newService();
+        if(name == DEFAULT_PROVIDER_NAME)
+            return p.newService();
+        else
+            return p.newService(1);
     }
 
 }
