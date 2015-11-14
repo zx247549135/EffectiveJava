@@ -1,4 +1,4 @@
-package book.examples.constructorInClass;
+package book.section2.constructorInClass;
 
 /**
  * Created by zx on 15-11-10.

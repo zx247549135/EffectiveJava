@@ -1,4 +1,4 @@
-package book.examples.singleton;
+package book.section2.singleton;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package book.examples.utilityClass;
+package book.section2.utilityClass;
 
 /**
  * Created by zx on 15-11-12.

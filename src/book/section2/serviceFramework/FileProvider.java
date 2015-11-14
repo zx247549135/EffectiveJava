@@ -1,4 +1,4 @@
-package book.examples.serviceFramework;
+package book.section2.serviceFramework;
 
 /**
  * Created by zx on 15-11-10.

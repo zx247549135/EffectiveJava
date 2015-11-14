@@ -1,4 +1,4 @@
-package book.examples.serviceFramework;
+package book.section2.serviceFramework;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

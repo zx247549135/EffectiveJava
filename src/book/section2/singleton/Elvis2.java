@@ -1,4 +1,4 @@
-package book.examples.singleton;
+package book.section2.singleton;
 
 /**
  * Created by zx on 15-11-11.
