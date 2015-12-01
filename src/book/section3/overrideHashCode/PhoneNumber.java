@@ -3,7 +3,7 @@ package book.section3.overrideHashCode;
 /**
  * Created by zx on 15-11-23.
  */
-public final class PhoneNumber {
+public final class PhoneNumber implements Comparable<PhoneNumber>{
 
     private final short areaCode;
     private final short prefix;
@@ -35,7 +35,6 @@ public final class PhoneNumber {
         return pn.lineNumber == lineNumber && pn.prefix == prefix && pn.areaCode == areaCode;
     }
 
-    /**
     @Override
     public int hashCode() {
         int result = hashCode;
@@ -47,6 +46,35 @@ public final class PhoneNumber {
         }
         return result;
     }
-    */
+
+//    @Override
+//    public int compareTo(PhoneNumber pn) {
+//        if( areaCode < pn.areaCode)
+//            return -1;
+//        if( areaCode > pn.areaCode)
+//            return 1;
+//        if( prefix < pn.prefix)
+//            return -1;
+//        if( prefix > pn.prefix)
+//            return 1;
+//        if( lineNumber < pn.lineNumber)
+//            return -1;
+//        if( lineNumber > pn.lineNumber)
+//            return 1;
+//        return 0;
+//
+//    }
+
+    @Override
+    public int compareTo(PhoneNumber pn) {
+        int areaCodeDiff = areaCode - pn.areaCode;
+        if(areaCodeDiff != 0)
+            return areaCodeDiff;
+        int prefixDiff = prefix - pn.prefix;
+        if(prefixDiff != 0)
+            return prefixDiff;
+        return lineNumber - pn.lineNumber;
+
+    }
 
 }

@@ -18,6 +18,15 @@ public class MainTest {
         PhoneNumber pn = new PhoneNumber(708, 867, 5309);
         m.put(pn,"Lucy");
         System.out.println("Get: " + m.get(pn));
+
+        // test 3
+        PhoneNumber pn2 = new PhoneNumber(708, 868, 3287);
+        double startTime = System.currentTimeMillis();
+        int compareResult = 0;
+        for(int i = 0; i < 90000; i ++)
+            compareResult += pn.compareTo(pn2);
+        double endTime = System.currentTimeMillis();
+        System.out.println("pn compare to pn2: " + compareResult + "; cost: " + (endTime - startTime));
     }
 
 }
